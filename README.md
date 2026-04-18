@@ -1,3 +1,5 @@
+![Logo](https://astro.build/assets/press/astro-logo-dark.svg)
+
 # Astro Portafolio
 
 Este es un portafolio de una página web desarrollada en astro, donde se busca trabajo.
