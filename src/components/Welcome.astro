@@ -1,201 +1,275 @@
----
-import astroLogo from "../assets/astro.svg";
-import background from "../assets/background.svg";
----
+<div class="portfolio-shell">
+	<div class="ambient ambient-left"></div>
+	<div class="ambient ambient-right"></div>
 
-<div id='container'>
-	<img id='background' src={background.src} alt='' fetchpriority='high' />
-	<main>
-		<section id='hero'>
-			<a href='https://astro.build'><img src={astroLogo.src} width='115' height='48' alt='Astro Homepage' /></a>
-			<h1>Hola soy leonardo</h1>
-			<section id='links'>
-				<a class='button' href='https://docs.astro.build'>Read our docs</a>
-				<a href='https://astro.build/chat'
-					>Join our Discord <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 127.14 96.36'
-						><path
-							fill='currentColor'
-							d='M107.7 8.07A105.15 105.15 0 0 0 81.47 0a72.06 72.06 0 0 0-3.36 6.83 97.68 97.68 0 0 0-29.11 0A72.37 72.37 0 0 0 45.64 0a105.89 105.89 0 0 0-26.25 8.09C2.79 32.65-1.71 56.6.54 80.21a105.73 105.73 0 0 0 32.17 16.15 77.7 77.7 0 0 0 6.89-11.11 68.42 68.42 0 0 1-10.85-5.18c.91-.66 1.8-1.34 2.66-2a75.57 75.57 0 0 0 64.32 0c.87.71 1.76 1.39 2.66 2a68.68 68.68 0 0 1-10.87 5.19 77 77 0 0 0 6.89 11.1 105.25 105.25 0 0 0 32.19-16.14c2.64-27.38-4.51-51.11-18.9-72.15ZM42.45 65.69C36.18 65.69 31 60 31 53s5-12.74 11.43-12.74S54 46 53.89 53s-5.05 12.69-11.44 12.69Zm42.24 0C78.41 65.69 73.25 60 73.25 53s5-12.74 11.44-12.74S96.23 46 96.12 53s-5.04 12.69-11.43 12.69Z'
-						></path></svg
-					>
-				</a>
-			</section>
-		</section>
-	</main>
+	<section class="portfolio-card">
+		<div class="eyebrow">Portafolio</div>
+		<h1>Leonardo Ramirez</h1>
+		<p class="lead">
+			Desarrollador de Software apasionado por las tecnologias 4.0.
+		</p>
 
-	<a href='https://astro.build/blog/astro-6-beta/' id='news' class='box'>
-		<svg width='32' height='32' fill='none' xmlns='http://www.w3.org/2000/svg'
-			><path
-				d='M24.667 12c1.333 1.414 2 3.192 2 5.334 0 4.62-4.934 5.7-7.334 12C18.444 28.567 18 27.456 18 26c0-4.642 6.667-7.053 6.667-14Zm-5.334-5.333c1.6 1.65 2.4 3.43 2.4 5.333 0 6.602-8.06 7.59-6.4 17.334C13.111 27.787 12 25.564 12 22.666c0-4.434 7.333-8 7.333-16Zm-6-5.333C15.111 3.555 16 5.556 16 7.333c0 8.333-11.333 10.962-5.333 22-3.488-.774-6-4-6-8 0-8.667 8.666-10 8.666-20Z'
-				fill='#111827'></path></svg
-		>
-		<h2>What's New in Astro 6.0?</h2>
-		<p>Redesigned dev server, fonts, live collections, built-in CSP support, and more! Click to explore Astro 6.0's new features.</p>
-	</a>
+		<div class="about">
+			<p>
+				Construyo experiencias web con foco en interfaces claras, codigo mantenible y
+				soluciones practicas.
+			</p>
+		</div>
+
+		<div class="skills-block">
+			<h2>Skills</h2>
+			<ul class="skills-list">
+				<li>JavaScript</li>
+				<li>TypeScript</li>
+				<li>HTML</li>
+				<li>CSS3</li>
+				<li>Tailwind</li>
+				<li>MongoDB</li>
+				<li>MySQL</li>
+			</ul>
+		</div>
+
+		<div class="links-block">
+			<a
+				class="primary-link"
+				href="https://www.linkedin.com/in/jleonardoramirez/"
+				target="_blank"
+				rel="noreferrer"
+			>
+				LinkedIn
+			</a>
+			<a
+				class="secondary-link"
+				href="https://github.com/LeoRami-99"
+				target="_blank"
+				rel="noreferrer"
+			>
+				GitHub
+			</a>
+		</div>
+	</section>
 </div>
 
 <style>
-	#background {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: -1;
-		filter: blur(100px);
+	:root {
+		--bg-main: #f4efe7;
+		--bg-card: rgba(255, 250, 242, 0.76);
+		--text-main: #1f2937;
+		--text-soft: #4b5563;
+		--accent: #c26a2d;
+		--accent-dark: #8d4720;
+		--line: rgba(96, 66, 44, 0.14);
+		--shadow: 0 30px 80px rgba(89, 59, 34, 0.18);
 	}
 
-	#container {
-		font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans", Arial, sans-serif;
-		height: 100%;
+	.portfolio-shell {
+		position: relative;
+		min-height: 100vh;
+		display: grid;
+		place-items: center;
+		padding: 32px 20px;
+		overflow: hidden;
+		background:
+			radial-gradient(circle at top left, rgba(236, 174, 112, 0.28), transparent 30%),
+			radial-gradient(circle at bottom right, rgba(91, 141, 122, 0.18), transparent 34%),
+			linear-gradient(135deg, #f8f3ec 0%, #efe4d3 48%, #e6d7c1 100%);
+		font-family: Georgia, "Times New Roman", serif;
 	}
 
-	main {
-		height: 100%;
-		display: flex;
-		justify-content: center;
+	.ambient {
+		position: absolute;
+		border-radius: 999px;
+		filter: blur(10px);
+		opacity: 0.6;
+		pointer-events: none;
+		animation: drift 9s ease-in-out infinite;
 	}
 
-	#hero {
-		display: flex;
-		align-items: start;
-		flex-direction: column;
-		justify-content: center;
-		padding: 16px;
+	.ambient-left {
+		top: 10%;
+		left: -40px;
+		width: 180px;
+		height: 180px;
+		background: rgba(194, 106, 45, 0.18);
+	}
+
+	.ambient-right {
+		right: -30px;
+		bottom: 12%;
+		width: 220px;
+		height: 220px;
+		background: rgba(92, 134, 118, 0.18);
+		animation-delay: 1.4s;
+	}
+
+	.portfolio-card {
+		position: relative;
+		width: min(100%, 760px);
+		padding: 40px;
+		border: 1px solid var(--line);
+		border-radius: 28px;
+		background: var(--bg-card);
+		backdrop-filter: blur(16px);
+		box-shadow: var(--shadow);
+		color: var(--text-main);
+		animation: rise 0.8s ease-out;
+	}
+
+	.eyebrow {
+		display: inline-flex;
+		padding: 8px 14px;
+		border-radius: 999px;
+		background: rgba(194, 106, 45, 0.12);
+		color: var(--accent-dark);
+		font-size: 12px;
+		letter-spacing: 0.18em;
+		text-transform: uppercase;
 	}
 
 	h1 {
-		font-size: 22px;
-		margin-top: 0.25em;
+		margin: 18px 0 10px;
+		font-size: clamp(2.5rem, 8vw, 4.6rem);
+		line-height: 0.95;
+		letter-spacing: -0.05em;
 	}
 
-	#links {
-		display: flex;
-		gap: 16px;
-	}
-
-	#links a {
-		display: flex;
-		align-items: center;
-		padding: 10px 12px;
-		color: #111827;
-		text-decoration: none;
-		transition: color 0.2s;
-	}
-
-	#links a:hover {
-		color: rgb(78, 80, 86);
-	}
-
-	#links a svg {
-		height: 1em;
-		margin-left: 8px;
-	}
-
-	#links a.button {
-		color: white;
-		background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
-		box-shadow:
-			inset 0 0 0 1px rgba(255, 255, 255, 0.12),
-			inset 0 -2px 0 rgba(0, 0, 0, 0.24);
-		border-radius: 10px;
-	}
-
-	#links a.button:hover {
-		color: rgb(230, 230, 230);
-		box-shadow: none;
-	}
-
-	pre {
-		font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
-		font-weight: normal;
-		background: linear-gradient(14deg, #d83333 0%, #f041ff 100%);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
+	.lead {
+		max-width: 30rem;
 		margin: 0;
+		font-size: 1.15rem;
+		line-height: 1.7;
+		color: var(--text-soft);
+	}
+
+	.about {
+		margin-top: 28px;
+		padding-top: 24px;
+		border-top: 1px solid var(--line);
+	}
+
+	.about p {
+		margin: 0;
+		max-width: 34rem;
+		font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+		font-size: 1rem;
+		line-height: 1.8;
+		color: var(--text-soft);
+	}
+
+	.skills-block {
+		margin-top: 30px;
 	}
 
 	h2 {
-		margin: 0 0 1em;
-		font-weight: normal;
-		color: #111827;
-		font-size: 20px;
+		margin: 0 0 16px;
+		font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+		font-size: 0.95rem;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--accent-dark);
 	}
 
-	p {
-		color: #4b5563;
-		font-size: 16px;
-		line-height: 24px;
-		letter-spacing: -0.006em;
+	.skills-list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 12px;
+		padding: 0;
 		margin: 0;
+		list-style: none;
 	}
 
-	code {
-		display: inline-block;
-		background:
-			linear-gradient(66.77deg, #f3cddd 0%, #f5cee7 100%) padding-box,
-			linear-gradient(155deg, #d83333 0%, #f041ff 18%, #f5cee7 45%) border-box;
-		border-radius: 8px;
-		border: 1px solid transparent;
-		padding: 6px 8px;
+	.skills-list li {
+		padding: 10px 14px;
+		border: 1px solid rgba(141, 71, 32, 0.16);
+		border-radius: 999px;
+		background: rgba(255, 255, 255, 0.5);
+		font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+		font-size: 0.95rem;
+		color: var(--text-main);
 	}
 
-	.box {
-		padding: 16px;
-		background: rgba(255, 255, 255, 1);
-		border-radius: 16px;
-		border: 1px solid white;
+	.links-block {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 14px;
+		margin-top: 34px;
 	}
 
-	#news {
-		position: absolute;
-		bottom: 16px;
-		right: 16px;
-		max-width: 300px;
+	.links-block a {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 140px;
+		padding: 14px 18px;
+		border-radius: 14px;
 		text-decoration: none;
-		transition: background 0.2s;
-		backdrop-filter: blur(50px);
+		font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+		font-weight: 700;
+		transition:
+			transform 0.2s ease,
+			box-shadow 0.2s ease,
+			background 0.2s ease;
 	}
 
-	#news:hover {
-		background: rgba(255, 255, 255, 0.55);
+	.primary-link {
+		background: linear-gradient(135deg, #c26a2d 0%, #8d4720 100%);
+		color: #fff8f1;
+		box-shadow: 0 18px 35px rgba(141, 71, 32, 0.22);
 	}
 
-	@media screen and (max-height: 368px) {
-		#news {
-			display: none;
+	.secondary-link {
+		border: 1px solid rgba(141, 71, 32, 0.2);
+		background: rgba(255, 255, 255, 0.56);
+		color: var(--text-main);
+	}
+
+	.links-block a:hover {
+		transform: translateY(-2px);
+	}
+
+	.primary-link:hover {
+		box-shadow: 0 22px 42px rgba(141, 71, 32, 0.28);
+	}
+
+	.secondary-link:hover {
+		background: rgba(255, 255, 255, 0.8);
+	}
+
+	@keyframes rise {
+		from {
+			opacity: 0;
+			transform: translateY(22px);
+		}
+
+		to {
+			opacity: 1;
+			transform: translateY(0);
 		}
 	}
 
-	@media screen and (max-width: 768px) {
-		#container {
-			display: flex;
-			flex-direction: column;
+	@keyframes drift {
+		0%,
+		100% {
+			transform: translateY(0px);
 		}
 
-		#hero {
-			display: block;
-			padding-top: 10%;
+		50% {
+			transform: translateY(-14px);
+		}
+	}
+
+	@media (max-width: 640px) {
+		.portfolio-shell {
+			padding: 20px 16px;
 		}
 
-		#links {
-			flex-wrap: wrap;
+		.portfolio-card {
+			padding: 28px 22px;
+			border-radius: 22px;
 		}
 
-		#links a.button {
-			padding: 14px 18px;
-		}
-
-		#news {
-			right: 16px;
-			left: 16px;
-			bottom: 2.5rem;
-			max-width: 100%;
-		}
-
-		h1 {
-			line-height: 1.5;
+		.links-block a {
+			width: 100%;
 		}
 	}
 </style>
